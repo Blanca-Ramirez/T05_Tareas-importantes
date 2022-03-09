@@ -23,6 +23,9 @@
           </ion-item-options>
           <ion-item>
             {{item}}
+              <ion-button expand="block" (click)="importantTask(i)">
+                <ion-icon slot="icon-only" name="star-outline"></ion-icon>
+              </ion-button>
           </ion-item>
           <ion-item-options side="end" (ionSwipe)="removeTask(i)">
             <ion-item-option expandable color="danger" >

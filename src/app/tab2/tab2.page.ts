@@ -10,8 +10,6 @@ export class Tab2Page {
 
   public comTasks: string[];
 
-
-
   constructor(private taskService: TaskserviceService) {
     this.comTasks = this.taskService.getCompletedTasks();
   }

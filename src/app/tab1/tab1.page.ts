@@ -9,7 +9,7 @@ import { TaskserviceService } from '../services/taskservice.service';
 export class Tab1Page {
 
   public tasks: string[];
-  public task: string
+  public task: string;
 
   constructor(private taskService:TaskserviceService) {
     this.tasks = this.taskService.getTasks();
@@ -29,6 +29,11 @@ export class Tab1Page {
 
   public completeTask(pos: number){
     this.taskService.completeTask(pos);
+    this.tasks = this.taskService.getTasks();
+  }
+
+  public importantTask(pos: number){
+    this.taskService.importantTask(pos);
     this.tasks = this.taskService.getTasks();
   }
 
